@@ -9,13 +9,13 @@ import (
 )
 
 func BenchmarkGoogleUUID(b *testing.B) {
-	for range b.N {
+	for i := 0; i < b.N; i++ {
 		uuid.New()
 	}
 }
 
 func BenchmarkRandCreation(b *testing.B) {
-	for range b.N {
+	for i := 0; i < b.N; i++ {
 		uuid7.MustNew()
 	}
 }
